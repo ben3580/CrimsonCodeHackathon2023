@@ -2,7 +2,7 @@ import React from "react";
 
 const Write = () => {
     return (
-        <div></div>
+        <div>This is the Write Page!</div>
     )
 }
 
