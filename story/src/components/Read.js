@@ -2,7 +2,7 @@ import React from "react";
 
 const Read = () => {
     return (
-        <div></div>
+        <div>This is the Read Page!</div>
     )
 }
 

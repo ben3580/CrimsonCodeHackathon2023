@@ -8,15 +8,16 @@ import Write from './Write'
 
 const App = () => {
   return (
-      <div className=''>
-          <BrowserRouter>
+    <div className=''>
+        <BrowserRouter>
+            <Header />
             <Routes>
-                <Route path="/" exact component={Landing} />
-                <Route path="/read" exact component={Read} />
-                <Route path="/write" exact component={Write} />
+                <Route path="/" exact element={<Landing />} />
+                <Route path="/read" exact element={<Read />} />
+                <Route path="/write" exact element={<Write />} />
             </Routes>
-          </BrowserRouter>
-      </div>
+        </BrowserRouter>
+    </div>
   );
 }
 
