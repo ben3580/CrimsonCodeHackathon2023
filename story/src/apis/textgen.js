@@ -1,5 +1,5 @@
 import axios from "axios";
-const key = "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";
+const key = process.env.REACT_APP_OPENAI_KEY
 const url = 'https://api.openai.com/v1/engines/davinci/completions';
 
 const axiosInstance = axios.create({
