@@ -13,10 +13,10 @@ const Header = (props) => {
         <div className="header">
             <div className="row dark_theme">
                 <div className="col-1 center dark_theme">
-                    <img src={HB} alt="Home button" width="30px" height="30px" />
+                    <img src={HB} alt="Home button" width="40px" height="40px" />
                 </div>
                 <div className="col-9 dark_theme">
-                    <h3>Title</h3>
+                    <h2>CommuniTales</h2>
                 </div>
                 <div className="col-2 center dark_theme">
                     {error && <p>Authentication Error</p>}
