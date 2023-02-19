@@ -54,7 +54,11 @@ const Write = (props) => {
     return (
         isAuthenticated && (
             <div className = "Form">
-              <h2 className = "write-page__title">Welcome to the write!</h2>
+              <h2 className = "write-page__title">Welcome to the write page!</h2>
+              <h3 className = "write-page__branch">Previous section:</h3>
+              <p className = "write-page__branch">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
                 <form onSubmit={addPage}>
                     <h3 className = "write-page__branch">What is the prompt?</h3>
                     <textarea value={branchText} onChange={(e) => setBranchText(e.target.value)} />
