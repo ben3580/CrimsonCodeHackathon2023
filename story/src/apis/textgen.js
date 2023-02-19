@@ -1,8 +1,10 @@
-var key = "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";
+import axios from "axios";
+const key = "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";
 const url = 'https://api.openai.com/v1/engines/davinci/completions';
 
-const got = require('got');
-
+const axiosInstance = axios.create({
+    baseURL: 'http://localhost:3001'
+})
 
 const generateText = async(textStarter) => {
     var prompt = `Continue this story:\n`;
@@ -20,9 +22,7 @@ const generateText = async(textStarter) => {
     };
 
     try {
-        const response = await got.post(url, { json: params, headers: headers }).json();
-        var output = response.choices[0].text;
-        return output;
+        return await axiosInstance.post(url, params, {headers: headers });
     } catch (err) {
         console.log(err);
     }
