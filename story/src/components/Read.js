@@ -6,7 +6,7 @@ const Read = () => {
     return (
         <div>
             <h2>This is the Read Page!</h2>
-            <Page pageid={2}/>
+            <Page pageid={1}/>
         </div>
     )
 }

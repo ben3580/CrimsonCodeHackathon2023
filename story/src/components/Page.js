@@ -2,19 +2,41 @@ import React, { useEffect, useState } from "react";
 
 import Option from "./Option";
 
+import database from '../apis/database';
+
 const Page = ({pageid}) => {
     const [pageInfo, setPageInfo] = useState({})
 
     const getPage = async(pageid) => {
-        //GET INFO FROM DB
+        var page = {}
+        var options = []
+        await database.get(`/read/${pageid}`)
+        .then(res => {
+            page = res.data[0]
+        })
+
+        if (page.option1id !== -1) {
+            await database.get(`/read/${page.option1id}`)
+            .then(res => {
+                options.push({optionText: res.data[0].prompttext, id:res.data[0].id})
+            })
+        }
+        if (page.option2id !== -1) {
+            await database.get(`/read/${page.option2id}`)
+            .then(res => {
+                options.push({optionText: res.data[0].prompttext, id:res.data[0].id})
+            })
+        }
+        if (page.option3id !== -1) {
+            await database.get(`/read/${page.option3id}`)
+            .then(res => {
+                options.push({optionText: res.data[0].prompttext, id:res.data[0].id})
+            })
+        }
 
         setPageInfo({
-            pageText: "You enter the castle, before you is a long hallway" + pageid,
-            options : [
-                {optionText: "Enter the door to your right", id:5},
-                {optionText: "Go up a staircase", id:6},
-                {optionText: "Turn around", id:7}
-            ]
+            pageText: page.text,
+            options : options
         })
     }
 
