@@ -93,8 +93,8 @@ const Page = ({pageid}) => {
             <div>
                 {pageInfo.options?.map(item => (item ? <Option key={item.id} text={item.optionText} changePage={getPage} id={item.id}/> : <Option id={currPage}/>))}
             </div>
-            <div className="dalleImage">
-                {imageSource ? <img src={imageSource} alt='the story' /> : <></>}
+            <div>
+                {imageSource ? <img src={imageSource} alt='the story' className="dalleImage" /> : <></>}
             </div>
             
         </div>
