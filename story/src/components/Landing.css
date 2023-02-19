@@ -14,7 +14,7 @@
 
 /* Page content */
 .content {
-    padding: 20px;
+    padding: 0;
     margin: 0;
     min-height: calc(100vh - 60px);
     color: white;
@@ -121,5 +121,15 @@ div{
 .d-block{
     height: 100vh;
     width: 100vw;
+    margin-bottom: 5vh;
 }
 
+.homeLinkButton{
+    background-color: turquoise;
+    border-color: turquoise;
+}
+
+.homeLinkButton:hover{
+    background-color: lightseagreen;
+    border-color: lightseagreen;
+}
