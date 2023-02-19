@@ -155,6 +155,7 @@ div{
     margin: 3%;
     padding: 1%;
     background-image: url(../images/parchment.webp);
+    background-size: 100%;
     color: darkslategray;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: large;
