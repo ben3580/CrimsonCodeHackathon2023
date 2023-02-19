@@ -54,8 +54,9 @@ const Page = ({pageid}) => {
 
     return (
         <div>
-            <p className="readText">{pageInfo.pageText}</p>
-
+            <div className="imageContainer">
+                <p className="readText">{pageInfo.pageText}</p>
+            </div>
             <div>
                 {pageInfo.options?.map(item => (item ? <Option key={item.id} text={item.optionText} changePage={getPage} id={item.id}/> : <Option id={currPage}/>))}
             </div>

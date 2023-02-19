@@ -150,3 +150,7 @@ div{
     text-align: justify;
     margin: 30px;
 }
+
+.imageContainer {
+    background-image: url(../images/parchment.avif);
+}
