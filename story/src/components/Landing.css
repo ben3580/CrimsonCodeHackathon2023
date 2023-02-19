@@ -90,20 +90,19 @@ div{
 }
 
 .homeLinkButton{
-    --bs-btn-padding-y: 200px;
+    --bs-btn-padding-y: 20px;
     --bs-btn-font-size: 40px;
     width: 100%;
     font-family: 'Lato', sans-serif;
 }
 
 .title{
-    padding-left: 50px;
     text-decoration: none;
-    color: white;
+    color: turquoise;
     font-family: 'Lobster', cursive;
 }
 
 .title:hover{
     text-decoration: underline;
-    color: white;
+    color: turquoise;
 }

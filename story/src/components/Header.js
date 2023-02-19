@@ -12,7 +12,7 @@ const Header = (props) => {
             <div className="row dark_theme stop">
                 <div className="col-10 dark_theme">
                     <Link to={"/"} className="title">
-                        <h2>CommuniTales</h2>
+                        <h1>CommuniTales</h1>
                     </Link>
                 </div>
                 <div className="col-2 center dark_theme stop">
