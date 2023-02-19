@@ -96,7 +96,7 @@ const Page = ({pageid}) => {
             <div>
                 {imageSource ? <img src={imageSource} alt='the story' className="dalleImage" /> : <></>}
             </div>
-            
+
         </div>
     )
 }
