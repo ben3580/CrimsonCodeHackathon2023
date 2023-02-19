@@ -145,3 +145,8 @@ div{
 .branchButton{
     margin:20px;
 }
+
+.readText{
+    text-align: justify;
+    margin: 30px;
+}
