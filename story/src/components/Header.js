@@ -5,8 +5,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import HB from "../images/home_button.png"
 
 const Header = (props) => {
-    const { logout, isAuthenticated } = useAuth0();
-
+    const { isAuthenticated } = useAuth0();
     return (
         <div className="header">
             <div className="row dark_theme">

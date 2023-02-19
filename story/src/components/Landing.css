@@ -46,3 +46,42 @@ body{
     display: flex;
     flex-direction: column;
 }
+
+.AuthButton{
+    border-radius: 4px;
+    background-color: indigo;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 10px;
+    padding: 10px;
+    width: 100px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.AuthButton span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .AuthButton span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .AuthButton:hover span {
+    padding-right: 20px;
+  }
+  
+  .AuthButton:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
