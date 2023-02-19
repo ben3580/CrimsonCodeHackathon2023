@@ -27,17 +27,16 @@ body{
     padding-top: 102px;
 }
 
-#center{
+.center{
     justify-content: center;
     display: flex;
-    background-color: indigo;
 }
 
 div{
     background-color: black;
 }
 
-#dark_theme{
+.dark_theme{
     background-color: indigo;
 }
 
