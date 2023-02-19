@@ -89,7 +89,6 @@ const Page = ({pageid}) => {
         <div>
             <div className="imageContainer">
                 <p className="readText">{pageInfo.pageText}</p>
-                <p> a </p>
             </div>
             <div className="dalleImage">
                 {imageSource ? <img src={imageSource} alt='the story' /> : <></>}
