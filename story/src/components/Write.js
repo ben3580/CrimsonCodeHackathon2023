@@ -94,16 +94,18 @@ const Write = (props) => {
                     <button className="button" type="submit">
                         Add page
                     </button>
+                </form>
 
-                    <button className="button" onClick={async() => {
+                <button className="button" onClick={async(e) => {
+                        e.preventDefault()
+
                         await generateText(pageText)
                         .then(res => {
-                            setPageText(pageText + res)
+                            setPageText(pageText + res.data.choices[0].text.trim())
                         })
                     }}>
                         Help me complete this!
-                    </button>
-                </form>
+                </button>
             </div>
         )
     )
