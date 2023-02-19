@@ -88,3 +88,14 @@ div{
     --bs-btn-font-size: 40px;
     width: 100%;
 }
+
+.title{
+    padding-left: 50px;
+    text-decoration: none;
+    color: wheat;
+}
+
+.title:hover{
+    text-decoration: underline;
+    color: wheat;
+}

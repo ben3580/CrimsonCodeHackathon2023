@@ -2,8 +2,7 @@ import React from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import LoginButton from './LoginButton';
 import LogoutButton from './LogoutButton';
-
-import HB from "../images/home_button.png"
+import {Link} from "react-router-dom"
 
 const Header = (props) => {
     const { isAuthenticated } = useAuth0();
@@ -11,11 +10,10 @@ const Header = (props) => {
     return (
         <div className="header">
             <div className="row dark_theme stop">
-                <div className="col-1 center dark_theme">
-                    <img src={HB} alt="Home button" width="40px" height="40px" />
-                </div>
-                <div className="col-9 dark_theme">
-                    <h2>CommuniTales</h2>
+                <div className="col-10 dark_theme">
+                    <Link to={"/"} className="title">
+                        <h2>CommuniTales</h2>
+                    </Link>
                 </div>
                 <div className="col-2 center dark_theme stop">
                     {error && <p>Authentication Error</p>}
