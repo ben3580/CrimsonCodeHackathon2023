@@ -6,6 +6,7 @@ import "./Write.css"
 import { useParams } from "react-router";
 
 import database from '../apis/database';
+import generateText from "../apis/textgen";
 
 const Write = (props) => {
     const navigate = useNavigate();
@@ -92,6 +93,15 @@ const Write = (props) => {
                     <br />
                     <button className="button" type="submit">
                         Add page
+                    </button>
+
+                    <button className="button" onClick={async() => {
+                        await generateText(pageText)
+                        .then(res => {
+                            setPageText(pageText + res)
+                        })
+                    }}>
+                        Help me complete this!
                     </button>
                 </form>
             </div>
