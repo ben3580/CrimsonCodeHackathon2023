@@ -5,7 +5,8 @@
     display: block;
     align-items: center;
     overflow:hidden;
-    color: black;
+    color: white;
+    background-color: black;
 }
 
 .Form .write-page__title{
@@ -21,8 +22,9 @@
     justify-content: left;
     padding-left: 2%;
     align-items: center;
-    height: 100%;
-    width: 100%;
+    height: 50%;
+    width: 92%;
+    text-align: justify;
 } 
 
 .Form .write-page__continue{
@@ -35,7 +37,7 @@
 } 
 
 .Form textarea{
-    width: 100%;
+    width: 90%;
     height: 100%;
     border: none;
     outline: none;
@@ -43,7 +45,7 @@
     font-size: 20px;
     padding: 10px;
     font-family: 'Noto Sans KR', sans-serif;
-    margin-bottom: 5%;
+    margin: 2%;
     background-color: lightgray;
     border-radius: 1em;
 }
@@ -62,6 +64,7 @@
     position: relative;
     background-color: #4CAF50;
     border: none;
+    border-radius: 5px;
     font-size: 20px;
     color: #FFFFFF;
     padding: 10px;
@@ -71,6 +74,8 @@
     text-decoration: none;
     overflow: hidden;
     cursor: pointer;
+    margin-left: 20px;
+    margin-bottom: 20px;
   }
   
   .button:after {

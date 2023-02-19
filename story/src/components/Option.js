@@ -6,7 +6,7 @@ const Option = ({text, changePage, id}) => {
     return (
         <div>
             {changePage ?
-                <button onClick={() => {changePage(id)}}>
+                <button className="btn btn-outline-primary homeLinkButton" type="button" onClick={() => {changePage(id)}}>
                     {text}
                 </button> :
                 <Link Link to={`/Write/${id}`}>
