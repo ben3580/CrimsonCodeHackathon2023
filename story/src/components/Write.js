@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import { useNavigate } from "react-router";
 
+
 import Page from "./Page";
 
 const Write = () => {
@@ -18,7 +19,7 @@ const Write = () => {
     }
 
     return (
-        <div>
+        <div className = "Div">
             <h2>This is the Write Page!</h2>
             <form onSubmit={addPage}>
                 <label>Branch:</label>

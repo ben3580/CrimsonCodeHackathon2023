@@ -14,14 +14,6 @@ const App = () => {
   const {isLoading, error} = useAuth0();
   return (
     <div className=''>
-      {error && <p>Authentication Error</p>}
-      {!error && isLoading && <p>Loading...</p>}
-      {!error && !isLoading && (
-        <>
-          <LoginButton className = "Login" />
-          <LogoutButton className = "Logout"/>
-        </>
-      )}
         <BrowserRouter>
             <Header />
             <Routes>
