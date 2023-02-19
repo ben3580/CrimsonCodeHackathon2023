@@ -1,18 +1,23 @@
 /* Style the header */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+
+
 .header {
-    padding: 10px 16px;
+    padding: 10px;
     background: indigo;
     color: #f1f1f1;
-}
-
-body{
-    height: 100vh;
+    height: 100%;
+    max-width: 100%;
 }
 
 /* Page content */
 .content {
-    padding: 16px;
-    flex: 1;
+    padding: 20px;
+    margin: 0;
+    min-height: calc(100vh - 60px);
+    color: white;
 }
 
 /* The sticky class is added to the header with JS when it reaches its scroll position */
@@ -27,23 +32,77 @@ body{
     padding-top: 102px;
 }
 
-#center{
+.center{
     justify-content: center;
     display: flex;
-    background-color: indigo;
 }
 
 div{
     background-color: black;
 }
 
-#dark_theme{
+.dark_theme{
     background-color: indigo;
 }
 
-body{
-    margin: 0;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+.AuthButton{
+    border-radius: 4px;
+    background-color: black;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 15px;
+    padding: 5px;
+    width: 100px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    font-family: 'Lato', sans-serif;
+}
+
+.AuthButton span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+  
+.AuthButton span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+  
+.AuthButton:hover span {
+    padding-right: 20px;
+}
+  
+.AuthButton:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.stop{
+    margin: 0px;
+}
+
+.homeLinkButton{
+    --bs-btn-padding-y: 20px;
+    --bs-btn-font-size: 40px;
+    width: 100%;
+    font-family: 'Lato', sans-serif;
+}
+
+.title{
+    text-decoration: none;
+    color: turquoise;
+    font-family: 'Lobster', cursive;
+}
+
+.title:hover{
+    text-decoration: underline;
+    color: turquoise;
 }
