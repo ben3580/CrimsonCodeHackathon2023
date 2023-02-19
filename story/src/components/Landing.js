@@ -37,7 +37,7 @@ const Landing = () => {
                             <img src={collab} className="d-block" alt="..." />
                             <div className="carousel-caption d-none d-md-block">
                                 <h2>Building a Narrative Together</h2>
-                                <p> great stories are best created through collaboration. That's why we offer a unique platform that enables you to build a story with your friends and other like-minded individuals. With our collaborative storytelling feature, you can work together to craft a narrative that's truly one-of-a-kind. Imagine being able to brainstorm ideas, develop characters, and create plot twists alongside your friends and fellow storytellers. With our platform, you can seamlessly collaborate in real-time, no matter where you are in the world. Each of you can add your own unique touch to the story, building a rich and complex narrative that none of you could have created alone.</p>
+                                <p>Great stories are best created through collaboration. That's why we offer a unique platform that enables you to build a story with your friends and other like-minded individuals. With our collaborative storytelling feature, you can work together to craft a narrative that's truly one-of-a-kind. Imagine being able to brainstorm ideas, develop characters, and create plot twists alongside your friends and fellow storytellers. With our platform, you can seamlessly collaborate in real-time, no matter where you are in the world. Each of you can add your own unique touch to the story, building a rich and complex narrative that none of you could have created alone.</p>
                             </div>
                         </div>
                     </div>
