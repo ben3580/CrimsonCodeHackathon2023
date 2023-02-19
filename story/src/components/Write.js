@@ -56,14 +56,16 @@ const Write = (props) => {
             <div className = "Form">
               <h2 className = "write-page__title">Welcome to the write!</h2>
                 <form onSubmit={addPage}>
-                    <h3 className = "write-page__branch">Branch:</h3>
+                    <h3 className = "write-page__branch">What is the prompt?</h3>
                     <textarea value={branchText} onChange={(e) => setBranchText(e.target.value)} />
                     <br />
 
-                    <h3 className = "write-page__continue">Please Continue the story</h3>
+                    <h3 className = "write-page__continue">Please continue the story:</h3>
                     <textarea className = "continueStory" value={pageText} onChange={(e) => setPageText(e.target.value)} />
                     <br />
-                    <button className = "button" type="submit">Add Page</button>
+                    <button className="button" type="submit">
+                        Add page
+                    </button>
                 </form>
             </div>
         )

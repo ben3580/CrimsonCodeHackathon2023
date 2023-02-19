@@ -122,7 +122,7 @@ div{
 .homeLinkButton{
     --bs-btn-padding-y: 20px;
     --bs-btn-font-size: 40px;
-    width: 100%;
+    width: 90%;
     font-family: 'Lato', sans-serif;
     background-color: turquoise;
     border-color: turquoise;
