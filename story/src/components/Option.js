@@ -11,9 +11,9 @@ const Option = ({text, changePage, id}) => {
                 </button> :
                 <Link Link to={`/Write/${id}`}>
                     <button className="btn btn-outline-info branchButton" type="button">
-                        "New Branch Available!"
+                        * New Branch Available! *
                     </button>
-                    
+
                 </Link>
             }
         </div>

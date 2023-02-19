@@ -77,7 +77,7 @@ const Write = (props) => {
     return (
         isAuthenticated && (
             <div className = "Form">
-              <h2 className = "write-page__title">Welcome to the write page!</h2>
+              <h2 className = "write-page__title">Contribute to the story!</h2>
               <h3 className = "write-page__branch">Previous section:</h3>
               <p className = "write-page__branch">
                 {previousText}
