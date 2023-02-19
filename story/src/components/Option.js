@@ -6,11 +6,14 @@ const Option = ({text, changePage, id}) => {
     return (
         <div>
             {changePage ?
-                <button className="btn btn-outline-primary" type="button" onClick={() => {changePage(id)}}>
+                <button className="btn btn-outline-primary branchButton" type="button" onClick={() => {changePage(id)}}>
                     {text}
                 </button> :
                 <Link Link to={`/Write/${id}`}>
-                    "New Branch Available!"
+                    <button className="btn btn-outline-primary branchButton" type="button">
+                        "New Branch Available!"
+                    </button>
+                    
                 </Link>
             }
         </div>

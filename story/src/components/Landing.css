@@ -136,3 +136,12 @@ div{
     background-color: lightseagreen;
     border-color: lightseagreen;
 }
+
+.readTitle{
+    text-align: center;
+    margin: 20px;
+}
+
+.branchButton{
+    margin:20px;
+}

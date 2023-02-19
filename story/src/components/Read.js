@@ -4,8 +4,8 @@ import Page from "./Page";
 
 const Read = () => {
     return (
-        <div className = "read content">
-            <h2>This is the Read Page!</h2>
+        <div className = "content">
+            <h2 className="readTitle">This is the Read Page!</h2>
             <Page pageid={1}/>
         </div>
     )
