@@ -152,10 +152,9 @@ div{
 }
 
 .imageContainer {
-    margin: 2%;
+    margin: 3%;
     padding: 1%;
-    border-radius: 5px;
-    background-image: url(../images/parchment.avif);
+    background-image: url(../images/parchment.webp);
     color: darkslategray;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: large;
