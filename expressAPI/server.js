@@ -49,7 +49,6 @@ const writePage = ({parentid, email, promptText, text}) => {
 
 const updatePage = (pageid, optionIndex, value) => {
     return new Promise(function(resolve, reject) {
-        console.log(`UPDATE Page SET ${optionIndex} = ${value} WHERE id = ${pageid};`)
         pool.query(`UPDATE Page SET ${optionIndex} = ${value} WHERE id = ${pageid};`, (error, results) => {
         if (error) {
             reject(error)

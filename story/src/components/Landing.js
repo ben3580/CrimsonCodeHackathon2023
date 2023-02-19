@@ -66,7 +66,7 @@ const Landing = () => {
                     </Link>
                 </div>
                 <div className="col">
-                    <Link to={"/Write"}>
+                    <Link to={"/Write/1"}>
                         <button className="btn btn-primary homeLinkButton" type="button">
                             Write
                         </button>

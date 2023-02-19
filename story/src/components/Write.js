@@ -3,6 +3,7 @@ import { useNavigate } from "react-router";
 import { useAuth0 } from "@auth0/auth0-react";
 import "./Write.css"
 
+import { useParams } from "react-router";
 
 import Page from "./Page";
 
@@ -11,6 +12,7 @@ import database from '../apis/database';
 
 const Write = (props) => {
     const navigate = useNavigate();
+    const { pageid } = useParams();
 
     const [branchText, setBranchText] = useState('')
     const [pageText, setPageText] = useState('')
@@ -18,7 +20,7 @@ const Write = (props) => {
     const addPage = async(e) => {
         e.preventDefault();
         var newid = -1
-        var par_id = props.pageid
+        var par_id = pageid
         var parent = {}
 
         await database.post(`/write`,

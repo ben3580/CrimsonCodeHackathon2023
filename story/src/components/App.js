@@ -20,7 +20,7 @@ const App = () => {
             <Routes>
                 <Route path="/" exact element={<Landing />} />
                 <Route path="/read" exact element={<Read />} />
-                <Route path="/write" exact element={<Write />} />
+                <Route path="/write/:pageid" exact element={<Write/>} />
             </Routes>
         </BrowserRouter>
     </div>

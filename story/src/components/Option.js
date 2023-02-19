@@ -1,10 +1,19 @@
 import React from "react";
 
+import {Link} from "react-router-dom"
+
 const Option = ({text, changePage, id}) => {
     return (
-        <button onClick={() => {changePage(id)}}>
-            {text}
-        </button>
+        <div>
+            {changePage ?
+                <button onClick={() => {changePage(id)}}>
+                    {text}
+                </button> :
+                <Link Link to={`/Write/${id}`}>
+                    "New Branch Available!"
+                </Link>
+            }
+        </div>
     )
 }
 
