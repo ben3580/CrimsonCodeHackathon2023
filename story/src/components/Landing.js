@@ -61,9 +61,9 @@ const Landing = () => {
                     </Link>
                 </div>
                 <div className="col">
-                    <Link to={"/Write/1"}>
+                    <Link to={"/Write/0"}>
                         <button className="btn btn-primary homeLinkButton" type="button">
-                            Write
+                            Write at a Random Location
                         </button>
                     </Link>
                 </div>
