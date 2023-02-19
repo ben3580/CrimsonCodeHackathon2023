@@ -60,6 +60,7 @@ const Page = ({pageid}) => {
             <div>
                 {pageInfo.options?.map(item => (item ? <Option key={item.id} text={item.optionText} changePage={getPage} id={item.id}/> : <Option id={currPage}/>))}
             </div>
+            <img src='../images/Trees.jpg' alt='the story'/>
         </div>
     )
 }
