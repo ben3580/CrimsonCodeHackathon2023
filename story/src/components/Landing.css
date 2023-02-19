@@ -90,13 +90,6 @@ div{
     margin: 0px;
 }
 
-.homeLinkButton{
-    --bs-btn-padding-y: 20px;
-    --bs-btn-font-size: 40px;
-    width: 100%;
-    font-family: 'Lato', sans-serif;
-}
-
 .title{
     text-decoration: none;
     color: turquoise;
@@ -127,6 +120,10 @@ div{
 }
 
 .homeLinkButton{
+    --bs-btn-padding-y: 20px;
+    --bs-btn-font-size: 40px;
+    width: 100%;
+    font-family: 'Lato', sans-serif;
     background-color: turquoise;
     border-color: turquoise;
     font-family: 'Lato', sans-serif;
