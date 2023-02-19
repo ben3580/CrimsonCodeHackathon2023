@@ -1,12 +1,9 @@
-import React, {useState} from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import { useAuth0 } from "@auth0/auth0-react";
 import "./Write.css"
 
 import { useParams } from "react-router";
-
-import Page from "./Page";
-
 
 import database from '../apis/database';
 
@@ -16,6 +13,7 @@ const Write = (props) => {
 
     const [branchText, setBranchText] = useState('')
     const [pageText, setPageText] = useState('')
+    const [previousText, setPreviousText] = useState('')
 
     const addPage = async(e) => {
         e.preventDefault();
@@ -49,12 +47,39 @@ const Write = (props) => {
 
         navigate('/')
     }
+
+    const loadWrite = async() => {
+        if (pageid === "0") {
+            console.log("REGENERATING")
+            await database.get('/random').then(
+                res => {
+                    navigate(`/write/${res.data.id}`)
+                    window.location.reload();
+                }
+            )
+        } else {
+            getPreviousText(pageid)
+        }
+    }
+
+    useEffect(() => {
+        loadWrite()
+    }, []);
+
+    const getPreviousText = async() => {
+        await database.get(`/read/${pageid}`)
+        .then(res => {
+            setPreviousText(res.data[0].text)
+        })
+    }
+
     const { logout,  isAuthenticated } = useAuth0();
 
     return (
         isAuthenticated && (
             <div className = "Form">
-              <h2 className = "write-page__title">Welcome to the write!</h2>
+                <h2 className = "write-page__title">Welcome to the write!</h2>
+                <p>{previousText}</p>
                 <form onSubmit={addPage}>
                     <h3 className = "write-page__branch">Branch:</h3>
                     <textarea value={branchText} onChange={(e) => setBranchText(e.target.value)} />

@@ -57,6 +57,16 @@ const updatePage = (pageid, optionIndex, value) => {
         })
     })}
 
+const getRandomIds = () => {
+    return new Promise(function(resolve, reject) {
+        pool.query(`SELECT id FROM Page ORDER BY id DESC LIMIT 5;`, (error, results) => {
+        if (error) {
+            reject(error)
+        }
+        resolve(results.rows);
+        })
+    })}
+
 app.get('/read/:id', (req, res) => {
     getPage(req.params.id)
     .then(response => {
@@ -85,6 +95,14 @@ app.get('/update/:id/:index/:value', (req, res) => {
         res.status(200).send("Added!");
     })
 })
+
+app.get('/random', (req, res) => {
+    getRandomIds()
+    .then(response => {
+        res.status(200).send(response[Math.floor(Math.random()*response.length)]);
+    })
+})
+
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
