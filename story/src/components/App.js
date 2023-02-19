@@ -18,8 +18,8 @@ const App = () => {
       {!error && isLoading && <p>Loading...</p>}
       {!error && !isLoading && (
         <>
-          <LoginButton />
-          <LogoutButton />
+          <LoginButton className = "Login" />
+          <LogoutButton className = "Logout"/>
         </>
       )}
         <BrowserRouter>
