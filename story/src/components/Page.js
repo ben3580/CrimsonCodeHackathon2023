@@ -90,11 +90,11 @@ const Page = ({pageid}) => {
             <div className="imageContainer">
                 <p className="readText">{pageInfo.pageText}</p>
             </div>
-            <div className="dalleImage">
-                {imageSource ? <img src={imageSource} alt='the story' /> : <></>}
-            </div>
             <div>
                 {pageInfo.options?.map(item => (item ? <Option key={item.id} text={item.optionText} changePage={getPage} id={item.id}/> : <Option id={currPage}/>))}
+            </div>
+            <div className="dalleImage">
+                {imageSource ? <img src={imageSource} alt='the story' /> : <></>}
             </div>
             
         </div>
